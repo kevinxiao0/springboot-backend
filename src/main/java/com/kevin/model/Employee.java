@@ -9,19 +9,22 @@ import javax.persistence.*;
 @Entity
 @Table(name = "employees")
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+//@AllArgsConstructor
+//@NoArgsConstructor
 public class Employee {
 
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private long id;
 
+    @Column(name = "first_name")
     private String firstName;
 
+    @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "emailId")
-    private String emailId;
+    @Column(name = "email_id")
+    private String email;
 
 }
